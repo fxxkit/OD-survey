@@ -60,9 +60,15 @@ $ git commit -m "<messages about this change>"
 
 * release master will reviewer the code changes and merge the PR if everything is fine (including the Travis CI build)
 
+## Update tags
+
+```
+git tag -a vx.x.x -m "version description"
+git push origin --tags 
+``` 
 
 ## links
 - [Herokuapp](https://od-survey.herokuapp.com/)
 - [Trello](https://trello.com/b/kaVf0D3t/product-backlog)
 - [Travis CI](https://travis-ci.org)
-
+- [Badge](https://badge.fury.io)

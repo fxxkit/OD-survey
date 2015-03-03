@@ -112,7 +112,7 @@
                         <div class="box-bg w-100p h-100p">
                             <img src="{{ url_for('static', filename='images/'+src) }}" class="w-100p h-100p">
                         </div>
-                        <div class="box-text bca-40 p-a fs-24 lh-72 fc-white z-1" scenario="{{ src }}">{{ scenario }}</div>
+                        <div class="box-text bca-40 p-a fs-24 lh-72 fc-white z-1" scenario="{{ scenario }}">{{ scenario }}</div>
                         <div class="example-badges-container p-a pl-8 ta-r">
                         {% for example in examples %}
                         <span class="badge p-r">{{ example }}</span>

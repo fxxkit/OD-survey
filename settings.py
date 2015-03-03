@@ -1,11 +1,12 @@
 # -*- coding: utf-8 -*-
 
-SITE_TITLE = u"APP 點菜 ?"
+SITE_TITLE = u"App 點菜"
 
 APPLE_BADGE = 'app-store-badge.svg'
 GOOGLE_BADGE = 'google-play.png'
 
 DEMO_URL = 'https://moqups.com/jordan00830@gmail.com/rwGGjJuF/p:afc8a2376'
+MONGODB_URI = 'mongodb://heroku_app33034248:pg9t7en0b41cmbglhniuf4vf8s@ds031611.mongolab.com:31611/heroku_app33034248'
 
 LOOP_CONTROL = True
 LOOP_INDICATORS = False
