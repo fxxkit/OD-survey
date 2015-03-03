@@ -24,17 +24,6 @@ logging.info('use collection "%s"' % co.full_name)
 def show_index():
     return render_template( 'index.tpl', settings=settings )
 
-@app.route('/dump', methods=['GET', 'POST'])
-def dump_db():
-    if request.method == 'GET' and 'key' in request.args and request.args.get('key') == 'gotopoopoo':
-        if os.path.exists( 'survery.db' ):
-            return send_from_directory( directory='.', filename="survery.db" )
-        else:
-            return "<h1>No Database found.</h1>"
-    else:
-        return '<h1>Permission denied</h1>'
-            
-
 @app.route('/digest', methods=['GET', 'POST'])
 def digest():
     if request.method == 'GET':
