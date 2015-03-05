@@ -73,7 +73,7 @@ sections = {
             'phone': True,
             'textClass': 'fc-black',
             'subTxtClass': 'fc-black',                  
-            'cssClass': 'pt-192 b-w',
+            'cssClass': 'b-w',
             'image': { 'demo': sorted(LOOP_IMAGES, key=lambda x:x['order'])[1]['file'] },
             'loop': True,
         },
@@ -84,7 +84,7 @@ sections = {
             'phone': True,
             'textClass': 'fc-black',
             'subTxtClass': 'fc-black',
-            'cssClass': 'pt-192 b-w',
+            'cssClass': 'b-w',
             'image': {'demo': 'demo/history.png' }
         },
         {
@@ -102,7 +102,7 @@ sections = {
             'textClass': 'fc-black',
             'badges': False,
             'phone': True,
-            'cssClass': 'pt-192',
+            'cssClass': '',
             'image': {'demo': 'demo/done.png' }
         },
         {

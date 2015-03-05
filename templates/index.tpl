@@ -47,9 +47,9 @@
 
 {% for section in settings.sections['demo-heading'] %}
 <div id="{{ '' if 'id' not in section else section['id'] }}" class="row section pt-64 {{ '' if 'cssClass' not in section else section['cssClass'] }}">
-    <section class="col-lg-12">
+    <section class="col-lg-12 pl-0 pr-0">
         <div class="container">
-            <div class="col-lg-12">
+            <div class="col-lg-12 pl-0 pr-0">
                 <div class="col-lg-{{ '5' if 'left' not in section else section['left'] }} col-md-12 col-sm-12 mt-72 pb-36">
                     {% if section['text'] %}<h1 class="fs-64 fw-600 mb-14 pl-18 {{ '' if 'textClass' not in section else section['textClass'] }}">{{ section['text'] }}</h1>{% endif %}
                     {% if section['subTxt'] %}<p class="fs-24 mb-14 pl-18 {{ '' if 'subTxtClass' not in section else section['subTxtClass'] }}">{{ section['subTxt'] }}</p>{% endif %}
@@ -66,7 +66,7 @@
                     </ul>
                     {% endif %}
                 </div>
-                <div class="col-lg-{{ 7 if 'right' not in section else section['right'] }} col-md-12 col-sm-12">
+                <div class="col-lg-{{ 7 if 'right' not in section else section['right'] }} col-md-12 col-sm-12 {{ 'pl-0 pr-0' if 'phone' in section and section['phone'] else ''}} ">
 
                     {% if 'loop' in section and section['loop'] %}
 
@@ -221,16 +221,16 @@
                                 </ul>
                             </div>
                         </div>
-                        <div class="pb-24 f-r button-groups">
-                            <button type="submit" class="btn btn-primary fs-18" id="submit-all-btn">
+                        <div class="pt-24 f-r button-groups">
+                            <button type="submit" class="btn btn-primary fs-24" id="submit-all-btn">
                                 <span>送出！</span>
                                 <i class="fa fa-paper-plane"> </i>
                             </button>
-                            <button type="" class="btn btn-primary fs-18 hidden" id="pending-btn" disabled>
+                            <button type="" class="btn btn-primary fs-24 hidden" id="pending-btn" disabled>
                                 <span>請稍等</span>
                                 <i class="fa-spin fa fa-cog"> </i>
                             </button>
-                            <button type="" class="btn btn-success fs-18 hidden" id="thanks-btn">
+                            <button type="" class="btn btn-success fs-24 hidden" id="thanks-btn">
                                 <span>謝謝您</span>
                                 <i class="fa fa-smile-o"> </i>
                             </button>

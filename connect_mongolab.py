@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 import pymongo
 import settings
+import pickle, os
 
 SEED_DATA = [
     {
@@ -49,17 +50,30 @@ class MongoLab(object):
         return mdocid
 
     def fetch_all(self):
-        return list(self.co.find())
-        
+        self.data = list(self.co.find())
+        return self.data
+    
+    def load(self, fn="survery.pkl"):
+        self.current = pickle.load(open(fn))
+        return self.current
+
+    def save(self, dump_fn="survery.pkl", overwrite=False):
+        if not os.path.exists(dump_fn) or overwrite:
+            pickle.dump(self.data, open(dump_fn, 'w'))
+        else:
+            print 'file',dump_fn,'exists'
+
     def bye(self):
         self.con.close()
 
 if __name__ == '__main__':
 
-    mongo = MongoLab(mongolab_uri=settings.MONGODB_URI, collection='test')
+    mongo = MongoLab(mongolab_uri=settings.MONGODB_URI)
 
-    mongo.insert(SEED_DATA)
+    # mongo.insert(SEED_DATA)
 
-    print mongo.fetch_all()
+    mongo.fetch_all()
+
+    mongo.save()
 
     mongo.bye()
